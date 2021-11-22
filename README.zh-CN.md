@@ -3,7 +3,7 @@
 <strong><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a></strong>
 </div>
 <div align="center">
-<p> 您的 <a href="https://github.com/shps951023/MiniExcel">Star</a> 能帮助 SignaRDotNet6Server 让更多人看到 </p>
+<p> 您的 <a href="https://github.com/LuGuangguang/SignaRDotNet6Server/blob/master">Star</a> 能帮助 SignaRDotNet6Server 让更多人看到 </p>
 </div>
 ### Introduction
 基于.Net 6.0的SignalR通讯Demo，包含WPF服务端，Web服务端，WPF客户端项目代码
