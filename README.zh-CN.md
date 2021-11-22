@@ -12,7 +12,7 @@
 ---
 
 ### 简介
-基于.Net 6.0的SignalR通讯Demo，包含WPF服务端，Web服务端，WPF客户端项目代码
+基于.Net 6.0的SignalR 客户端-服务端 通讯Demo，包含WPF服务端，Web服务端，WPF客户端项目代码
 
 注意：
 
