@@ -2,6 +2,8 @@
 <div align="center">
 <strong><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> </strong>
 </div>
+---
+
 ### Introduction
 SignalR communication Demo based on .Net 6.0, including WPF server, Web server, WPF client project code
 
