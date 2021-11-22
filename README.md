@@ -6,7 +6,7 @@
 ---
 
 ### Introduction
-SignalR communication Demo based on .Net 6.0, including WPF server, Web server, WPF client project code
+SignalR C/S Demo based on .Net 6.0, including WPF server, Web server, WPF client project code
 
 Notice:
 
