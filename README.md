@@ -1,4 +1,8 @@
 # SignaRDotNet6Server
+<div align="center">
+<strong><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.zh-Hant.md">繁體中文</a></strong>
+</div>
+### Introduction
 基于.Net 6.0的SignalR通讯Demo，包含WPF服务端，Web服务端，WPF客户端项目代码
 
 注意：
