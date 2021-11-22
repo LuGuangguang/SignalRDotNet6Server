@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="5">
           
-            <Button Content="连接" Command="{Binding ConnectCmd}"/>
+            <Button Content="Link" Command="{Binding ConnectCmd}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5">
             <TextBlock Text="信   息："/>

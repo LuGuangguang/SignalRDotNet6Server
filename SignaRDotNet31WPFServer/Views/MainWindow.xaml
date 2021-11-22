@@ -1,9 +1,9 @@
-﻿<Window x:Class="SignaRDotNet6WPFServer.Views.MainWindow"
+﻿<Window x:Class="SignaRDotNet31WPFServer.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SignaRDotNet6WPFServer.Views"
+        xmlns:local="clr-namespace:SignaRDotNet31WPFServer.Views"
          xmlns:signalRHubs= "clr-namespace:SignalRHubs;assembly=SignalRHubs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -28,9 +28,7 @@
             <TextBox Text="{Binding Msg}" Width="200"/>
             <Button Command="{Binding SendAllMessageCmd}" Content="Send a Info to All Clients "/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2">
-            <Button Command="{Binding SendAllMessageCmd}" Content="test"/>
-        </StackPanel>
+     
 
     </Grid>
 </Window>

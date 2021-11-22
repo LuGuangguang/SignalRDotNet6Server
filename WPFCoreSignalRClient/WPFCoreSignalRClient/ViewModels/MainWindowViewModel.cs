@@ -32,6 +32,13 @@ namespace WPFCoreSignalRClient.ViewModels
                 await connection.StartAsync();
             };
 
+            connection.On<string>("ReceiveFromServerMessage", (info) =>
+            {
+                App.Current.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    MessagesList.Add(info);
+                }));
+            }); 
             connection.On<string>("SendSelfInfoMessage", (info) =>
             {
                 App.Current.Dispatcher.BeginInvoke(new Action(() =>
