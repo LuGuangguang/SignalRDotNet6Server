@@ -19,6 +19,7 @@
 
             <Button Content="Link" Command="{Binding ConnectCmd}"/>
             <TextBlock Margin="5" Text="{Binding Urls}"/>
+            <TextBlock Margin="5" Text="{Binding connection.State}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5">
             <TextBlock Text="Info："/>

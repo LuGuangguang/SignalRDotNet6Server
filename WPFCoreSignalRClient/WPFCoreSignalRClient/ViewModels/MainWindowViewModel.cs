@@ -11,27 +11,39 @@ using System.Windows.Input;
 using System.Net;
 using WPFCoreSignalRClient.Models;
 using WPFCoreSignalRClient.AppsettingsModels;
+using System.Windows;
+using System.Threading;
 
 namespace WPFCoreSignalRClient.ViewModels
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel : DependencyObject, INotifyPropertyChanged
     {
         private readonly IWritableOptions<AppsettingsModels.UserSettings> _userSettings;
         public MainWindowViewModel(IWritableOptions<AppsettingsModels.UserSettings> userSettings)
         {
+
+
             _userSettings = userSettings;
             connection = new HubConnectionBuilder()
                 .WithUrl(userSettings.Value.Urls)
                 .WithAutomaticReconnect()  //自动重连
                 .Build();
             ConnectCmd.Execute(null);
-            if (connection.State == HubConnectionState.Disconnected)
+            if (connection.State != HubConnectionState.Connected)
             {
                 timer.Tick += new EventHandler(async (sender, e) =>
                 {
                     if (connection.State == HubConnectionState.Disconnected)
                     {
-                        await connection.StartAsync();
+                        try
+                        {
+                            await connection.StartAsync();
+                        }
+                        catch (Exception ex)
+                        {
+
+                       
+                        }
                         if (connection.State == HubConnectionState.Connected)
                         {
                             timer.Stop();
@@ -91,7 +103,18 @@ namespace WPFCoreSignalRClient.ViewModels
                     MessagesList.Add("ReceiveGroupMessage:" + newMessage);
                 }));
             });
+
+
             #endregion
+
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(connection)));
+                    Thread.Sleep(5000);
+                }
+            });
         }
 
         private DispatcherTimer timer = new DispatcherTimer()
@@ -111,7 +134,19 @@ namespace WPFCoreSignalRClient.ViewModels
         public string UserName { get; set; }
         public string Msg { get; set; }
         public ObservableCollection<string> MessagesList { get; set; } = new ObservableCollection<string>();
-        HubConnection connection;
+
+        public HubConnection connection { get; set; }
+        //public HubConnection connection
+        //{
+        //    get { return (HubConnection)GetValue(connectionProperty); }
+        //    set { SetValue(connectionProperty, value); }
+        //}
+
+        //// Using a DependencyProperty as the backing store for connection.  This enables animation, styling, binding, etc...
+        //public static readonly DependencyProperty connectionProperty =
+        //    DependencyProperty.Register("connection", typeof(HubConnection), typeof(MainWindowViewModel), null);
+
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
