@@ -18,4 +18,15 @@
 
 1.WPF服务端不支持Win7及以下系统，会报Dll错误
 
-2.目前不支持从服务端往客户端发送信息（已提交到SignalR Issue）
+### 快速实践
+
+你可以运行  SignaRDotNet31WPFServer 或 SignaRDotNet6WebServer 或 SignaRDotNet6WPFServer 其中一个作为SingalR服务器。
+
+你需要修改 appsettings.json 中 "Urls" 字段为你要配置的服务器地址。
+
+最后你需要启动 WPFCoreSignalRClient 作为客户端来连接SingalR服务端，当然你也需要修改 WPFCoreSignalRClient 下的 ppsettings.json 中 "Urls" 字段，保持与服务端的一致。
+
+以上步骤如果你都完成，那么就会在软件UI显示如下图所示：
+
+![signalR](https://user-images.githubusercontent.com/34500722/142980678-be5b3b40-35d8-4efc-95a8-f7c21a173778.png)
+
