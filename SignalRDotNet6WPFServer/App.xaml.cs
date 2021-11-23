@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SignaRDotNet6WPFServer.AppsettingsModels;
+using SignalRDotNet6WPFServer.AppsettingsModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,7 +16,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace SignaRDotNet6WPFServer
+namespace SignalRDotNet6WPFServer
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,4 +1,4 @@
-﻿namespace SignaRDotNet31WPFServer
+﻿namespace SignalRDotNet6WPFServer
 {
     public static class StaticGlobalClass
     {

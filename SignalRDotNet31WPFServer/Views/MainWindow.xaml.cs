@@ -1,4 +1,4 @@
-﻿using SignaRDotNet31WPFServer.AppsettingsModels;
+﻿using SignalRDotNet31WPFServer.AppsettingsModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SignaRDotNet31WPFServer.Views
+namespace SignalRDotNet31WPFServer.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

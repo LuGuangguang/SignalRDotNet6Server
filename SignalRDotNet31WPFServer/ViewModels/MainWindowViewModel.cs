@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace SignaRDotNet6WPFServer.ViewModels
+namespace SignalRDotNet31WPFServer.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {

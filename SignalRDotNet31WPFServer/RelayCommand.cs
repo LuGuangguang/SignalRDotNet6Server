@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
-namespace SignaRDotNet6WPFServer
+namespace SignalRDotNet31WPFServer
 {
     public class RelayCommand : ICommand
     {

@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Text;
 
-namespace SignaRDotNet31WPFServer.AppsettingsModels
+namespace SignalRDotNet31WPFServer.AppsettingsModels
 {
     public class UserSettings : IOptions<UserSettings>, INotifyPropertyChanged
     {

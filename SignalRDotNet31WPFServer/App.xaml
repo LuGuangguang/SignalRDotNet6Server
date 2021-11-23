@@ -1,7 +1,7 @@
-﻿<Application x:Class="SignaRDotNet31WPFServer.App"
+﻿<Application x:Class="SignalRDotNet31WPFServer.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SignaRDotNet31WPFServer"
+             xmlns:local="clr-namespace:SignalRDotNet31WPFServer"
              >
     <Application.Resources>
          

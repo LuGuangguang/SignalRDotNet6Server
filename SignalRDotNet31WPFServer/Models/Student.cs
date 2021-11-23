@@ -1,4 +1,4 @@
-﻿namespace SignaRDotNet31WPFServer.Models
+﻿namespace SignalRDotNet31WPFServer.Models
 {
     public class Student
     {

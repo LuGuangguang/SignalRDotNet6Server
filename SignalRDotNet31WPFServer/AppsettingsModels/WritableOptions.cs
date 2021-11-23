@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace SignaRDotNet31WPFServer.AppsettingsModels
+namespace SignalRDotNet31WPFServer.AppsettingsModels
 {
     public interface IWritableOptions<out T> : IOptionsSnapshot<T> where T : class, new()
     {

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaRDotNet6WPFServer", "SignaRDotNet6WPFServer\SignaRDotNet6WPFServer.csproj", "{E95BB771-F8E1-4054-A99B-AB14EC8CD73A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRDotNet6WPFServer", "SignalRDotNet6WPFServer\SignalRDotNet6WPFServer.csproj", "{E95BB771-F8E1-4054-A99B-AB14EC8CD73A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaRDotNet6WebServer", "SignaRDotNet6WebServer\SignaRDotNet6WebServer.csproj", "{4BE3CE36-2DA2-48BF-B94D-E41C2D4CF52F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRDotNet6WebServer", "SignalRDotNet6WebServer\SignalRDotNet6WebServer.csproj", "{4BE3CE36-2DA2-48BF-B94D-E41C2D4CF52F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRHubs", "SignalRHubs\SignalRHubs.csproj", "{969D3278-CB5C-446D-AF4B-DB87CB7D60B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFCoreSignalRClient", "WPFCoreSignalRClient\WPFCoreSignalRClient\WPFCoreSignalRClient.csproj", "{07CAB271-E23B-4A3F-B31F-B589E23BEDBE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaRDotNet31WPFServer", "SignaRDotNet31WPFServer\SignaRDotNet31WPFServer.csproj", "{A64D6168-1681-4A30-937E-4A0894072661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRDotNet31WPFServer", "SignalRDotNet31WPFServer\SignalRDotNet31WPFServer.csproj", "{A64D6168-1681-4A30-937E-4A0894072661}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
