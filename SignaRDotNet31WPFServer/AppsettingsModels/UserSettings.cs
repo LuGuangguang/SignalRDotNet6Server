@@ -19,6 +19,7 @@ namespace SignaRDotNet31WPFServer.AppsettingsModels
         /// 是否是第一次打开此软件
         /// </summary>
         public bool IsFirstLaunch { get; set; }
+        public string Urls { get; set; }
         public event PropertyChangedEventHandler? PropertyChanged;
     }
 }

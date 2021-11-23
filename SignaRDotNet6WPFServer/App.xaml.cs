@@ -11,6 +11,8 @@ using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -50,8 +52,15 @@ namespace SignaRDotNet6WPFServer
             services.AddSingleton<ViewModels.MainWindowViewModel>();
 
             var builder = WebApplication.CreateBuilder();
-            builder.WebHost.UseUrls(configuration.GetSection("Urls").Value);
-            StaticGlobalClass.URLS = configuration.GetSection("Urls").Value;
+            string urls = configuration.GetSection("Urls").Value;
+
+            if (string.IsNullOrWhiteSpace(urls))
+            {
+
+                urls = $"http://{GetLocalIp()}:5999";
+            }
+            builder.WebHost.UseUrls(urls);  //This line of code is not necessary,runtime will be added automatically
+            StaticGlobalClass.URLS = urls;
             // Add services to the container.
             builder.Services.AddSignalR();
             //添加跨域CORS 服务，默认允许任何域名访问
@@ -89,6 +98,22 @@ namespace SignaRDotNet6WPFServer
             services.AddSingleton<IHubContext<SignalRHubs.ChatHub>>(hubContext);
       
             await app.RunAsync();
+        }
+
+        public string GetLocalIp()
+        {
+            ///获取本地的IP地址
+            string AddressIP = string.Empty;
+            foreach (IPAddress _IPAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
+            {
+                if (_IPAddress.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    AddressIP = _IPAddress.ToString();
+                }
+            }
+            IPAddress ipAddr = Dns.Resolve(Dns.GetHostName()).AddressList[0];//获得当前IP地址
+            string ip = ipAddr.ToString();
+            return AddressIP;
         }
     }
 }

@@ -16,30 +16,31 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="5">
-          
+
             <Button Content="Link" Command="{Binding ConnectCmd}"/>
+            <TextBlock Margin="5" Text="{Binding Urls}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5">
-            <TextBlock Text="信   息："/>
+            <TextBlock Text="Info："/>
             <TextBox Text="{Binding Msg}" Width="200"/>
-            <Button Content="发送信息返回自己" Command="{Binding SendSelfInfoMessageCmd}"/>
+            <Button Content="Send a message to yourself" Command="{Binding SendSelfInfoMessageCmd}"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="5">
-            <Button Content="发送实体返回自己" Command="{Binding SendSelfMessageCmd}"/>
-            <TextBlock Text="  用户ID："/>
+            <Button Content="Send a Model Json to yourself" Command="{Binding SendSelfMessageCmd}"/>
+            <TextBlock Text="   UserID："/>
             <TextBox Text="{Binding ConnectionId}" Width="200"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="5">
-            <Button Content="发送实体给全部人" Command="{Binding SendAllMessageCmd}"/>
-        </StackPanel>  
+            <Button Content="Send a Model Json To All Users" Command="{Binding SendAllMessageCmd}"/>
+        </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="5">
-            <TextBlock Text="姓名:"/>
-            <TextBox Text="{Binding StudentGroup.Name}" Width="100"/> 
-            <TextBlock Text="年龄:"/>
-            <TextBox Text="{Binding StudentGroup.Age}" Width="100" />  
-            <TextBlock Text="年级:"/>
+            <TextBlock Text="Name:"/>
+            <TextBox Text="{Binding StudentGroup.Name}" Width="100"/>
+            <TextBlock Text="Age:"/>
+            <TextBox Text="{Binding StudentGroup.Age}" Width="100" />
+            <TextBlock Text="Grade:"/>
             <TextBox Text="{Binding StudentGroup.Grade}" Width="100"/>
-            <Button Content="发送实体给组" Command="{Binding SendGroupMessageCmd}"/>
+            <Button Content="Send a Model Json To Group byGroup Grade" Command="{Binding SendGroupMessageCmd}"/>
         </StackPanel>
         <ListView ItemsSource="{Binding MessagesList}"  Grid.Row="5"/>
 

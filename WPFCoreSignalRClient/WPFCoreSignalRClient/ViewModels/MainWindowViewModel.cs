@@ -16,14 +16,30 @@ namespace WPFCoreSignalRClient.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        private readonly IWritableOptions<AppsettingsModels.UserSettings> _userSettings;
         public MainWindowViewModel(IWritableOptions<AppsettingsModels.UserSettings> userSettings)
         {
-            
+            _userSettings = userSettings;
             connection = new HubConnectionBuilder()
                 .WithUrl(userSettings.Value.Urls)
                 .WithAutomaticReconnect()  //自动重连
                 .Build();
-
+            ConnectCmd.Execute(null);
+            if (connection.State == HubConnectionState.Disconnected)
+            {
+                timer.Tick += new EventHandler(async (sender, e) =>
+                {
+                    if (connection.State == HubConnectionState.Disconnected)
+                    {
+                        await connection.StartAsync();
+                        if (connection.State == HubConnectionState.Connected)
+                        {
+                            timer.Stop();
+                        }
+                    }
+                });
+                timer.Start();
+            }
 
             #region snippet_ClosedRestart
             connection.Closed += async (error) =>
@@ -38,7 +54,7 @@ namespace WPFCoreSignalRClient.ViewModels
                 {
                     MessagesList.Add(info);
                 }));
-            }); 
+            });
             connection.On<string>("SendSelfInfoMessage", (info) =>
             {
                 App.Current.Dispatcher.BeginInvoke(new Action(() =>
@@ -77,6 +93,20 @@ namespace WPFCoreSignalRClient.ViewModels
             });
             #endregion
         }
+
+        private DispatcherTimer timer = new DispatcherTimer()
+        {
+            Interval = new TimeSpan(0, 0, 15),
+
+        };
+        public string Urls
+        {
+            get
+            {
+                return _userSettings.Value.Urls;
+            }
+        }
+
         public string ConnectionId { get; set; }
         public string UserName { get; set; }
         public string Msg { get; set; }
