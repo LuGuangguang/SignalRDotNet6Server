@@ -16,8 +16,6 @@ Especially it is very suitable for the rapid construction and deployment of LAN 
 
 1. The WPF server does not support Win7 and below systems and will report a Dll error
 
-2. Currently does not support sending information from the server to the client (had submitted to SignalR Issue)
-
 ### Fast Practice
 
 You can run project SignaRDotNet31WPFServer|SignaRDotNet6WebServer|SignaRDotNet6WPFServer one of it to build SignalR Server.
