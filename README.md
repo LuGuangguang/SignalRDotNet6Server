@@ -7,7 +7,9 @@
 
 ### Introduction
 SignalR C/S Demo based on .Net 6.0, including WPF server, Web server, WPF client project code;
+
 It can help you build SignalR C/S project fastly and easily;
+
 Especially it is very suitable for the rapid construction and deployment of LAN communication;
 
 Notice:
