@@ -1,4 +1,4 @@
-# SignaRDotNet6Server
+# SignalRDotNet6Server
 <div align="center">
 <strong><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> </strong>
 </div>
@@ -18,7 +18,7 @@ Especially it is very suitable for the rapid construction and deployment of LAN 
 
 ### Fast Practice
 
-You can run project SignaRDotNet31WPFServer|SignaRDotNet6WebServer|SignaRDotNet6WPFServer one of it to build SignalR Server.
+You can run project SignalRDotNet31WPFServer|SignalRDotNet6WebServer|SignalRDotNet6WPFServer one of it to build SignalR Server.
 
 You need to modify appsettings.json-"Urls" Value to change SignalR server Url.
 
