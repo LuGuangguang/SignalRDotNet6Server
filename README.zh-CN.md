@@ -24,7 +24,7 @@
 
 你需要修改 appsettings.json 中 "Urls" 字段为你要配置的服务器地址。
 
-最后你需要启动 WPFCoreSignalRClient 作为客户端来连接SingalR服务端，当然你也需要修改 WPFCoreSignalRClient 下的 ppsettings.json 中 "Urls" 字段，保持与服务端的一致。
+最后你需要启动 WPFCoreSignalRClient 作为客户端来连接SingalR服务端，当然你也需要修改 WPFCoreSignalRClient 下的 appsettings.json 中 "Urls" 字段，保持与服务端的一致。
 
 以上步骤如果你都完成，那么就会在软件UI显示如下图所示：
 
