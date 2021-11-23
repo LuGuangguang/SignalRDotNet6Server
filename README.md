@@ -1,8 +1,15 @@
 # SignaRDotNet6Server
-基于.Net 6.0的SignalR通讯Demo，包含WPF服务端，Web服务端，WPF客户端项目代码
+<div align="center">
+<strong><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a> </strong>
+</div>
 
-注意：
+---
 
-1.WPF服务端不支持Win7及以下系统，会报Dll错误
+### Introduction
+SignalR C/S Demo based on .Net 6.0, including WPF server, Web server, WPF client project code
 
-2.目前不支持从服务端往客户端发送信息（已提交到SignalR Issue）
+Notice:
+
+1. The WPF server does not support Win7 and below systems and will report a Dll error
+
+2. Currently does not support sending information from the server to the client (had submitted to SignalR Issue)
