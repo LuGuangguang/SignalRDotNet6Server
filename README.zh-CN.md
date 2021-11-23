@@ -1,4 +1,4 @@
-# SignaRDotNet6Server
+# SignalRDotNet6Server
 
 ---
 
@@ -6,7 +6,7 @@
 <strong><a href="README.md">English</a> | <a href="README.zh-CN.md">简体中文</a></strong>
 </div>
 <div align="center">
-<p> 您的 <a href="https://github.com/LuGuangguang/SignaRDotNet6Server">Star</a> 能帮助 SignaRDotNet6Server 让更多人看到 </p>
+<p> 您的 <a href="https://github.com/LuGuangguang/SignalRDotNet6Server">Star</a> 能帮助 SignaRDotNet6Server 让更多人看到 </p>
 </div>
 
 ---
@@ -20,7 +20,7 @@
 
 ### 快速实践
 
-你可以运行  SignaRDotNet31WPFServer 或 SignaRDotNet6WebServer 或 SignaRDotNet6WPFServer 其中一个作为SingalR服务器。
+你可以运行  SignalRDotNet31WPFServer 或 SignalRDotNet6WebServer 或 SignalRDotNet6WPFServer 其中一个作为SingalR服务器。
 
 你需要修改 appsettings.json 中 "Urls" 字段为你要配置的服务器地址。
 
